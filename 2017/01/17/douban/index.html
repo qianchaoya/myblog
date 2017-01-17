@@ -29,7 +29,7 @@ Git clonehttps://github.com/kuaixiangai/demo_template.githttp://owlcarousel2.git
 <meta property="og:image" content="http://yoursite.com/1.png">
 <meta property="og:image" content="http://yoursite.com/2.png">
 <meta property="og:image" content="http://yoursite.com/3.png">
-<meta property="og:updated_time" content="2017-01-17T02:11:07.077Z">
+<meta property="og:updated_time" content="2017-01-17T02:13:05.882Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="豆瓣电影 | my blog">
 <meta name="twitter:description" content="angularJS豆瓣电影一，AngularJS工程框架1.1 使用git clone下载地址：https://github.com/jbutko/AngularJS-Boilerplate
@@ -195,56 +195,9 @@ classes that you can use:
 </ul>
 <h5 id="2-6-1-file协议"><a href="#2-6-1-file协议" class="headerlink" title="2.6.1 file协议"></a>2.6.1 file协议</h5><p>如果file协议的话，可以在chrome执行时，加上–allow-file-access-from-files 允许file协议使用ajax。</p>
 <h5 id="2-6-2-在angular中使用jsonp的方式进行请求WebApi接口"><a href="#2-6-2-在angular中使用jsonp的方式进行请求WebApi接口" class="headerlink" title="2.6.2 在angular中使用jsonp的方式进行请求WebApi接口"></a>2.6.2 在angular中使用jsonp的方式进行请求WebApi接口</h5><p>在Angular中使用JSONP的方式做跨域请求，是不支持豆瓣的接口            的。因为Angular自己封装了JSONP的方法，这个方法是封装在了一            个对象中。（豆瓣不支持，只支持传递一个函数名的方式）</p>
-<h5 id="2-6-3-自己手动写JSONP"><a href="#2-6-3-自己手动写JSONP" class="headerlink" title="2.6.3 自己手动写JSONP"></a>2.6.3 自己手动写JSONP</h5><blockquote>
-  <!--  this.jsonp = function(url, data, callback) {
-   // 1.处理URL地址中的回调参数
-   // 2.创建一个script标签
-   // 3.挂载回调函数
-   // 4.将script标签放到页面中
-    //var fnSuffix = 
-     //Math.random().toString().replace(".", "");
-     //var cbFuncName = 'my_json_cb' + fnSuffix; 
-     $window[cbFuncName] = callback;
-        var queryString = url.indexOf("?") == -1 ? "?" : "&";
-     for(var key in data) {    
-    queryString += key + "=" + data[key] + "&";
-          }      
-          queryString += "callback=" + cbFuncName; 
-            var scriptElement = 
-            $document[0].createElement("script"); 
-             scriptElement.src = url + queryString; 
-          $document[0].body.appendChild(scriptElement);    };   -->   
-<h4 id="三、加载提示动画"><a href="#三、加载提示动画" class="headerlink" title="三、加载提示动画"></a>三、加载提示动画</h4><p>Css loading，随便使用加载的动画效果即可  </p>
+<h5 id="2-6-3-自己手动写JSONP"><a href="#2-6-3-自己手动写JSONP" class="headerlink" title="2.6.3 自己手动写JSONP"></a>2.6.3 自己手动写JSONP</h5><h4 id="三、加载提示动画"><a href="#三、加载提示动画" class="headerlink" title="三、加载提示动画"></a>三、加载提示动画</h4><p>Css loading，随便使用加载的动画效果即可  </p>
 <h4 id="四、分页"><a href="#四、分页" class="headerlink" title="四、分页"></a>四、分页</h4><p>可以使用bootstrap分页效果或者angular-ui库中的效果。如果你大量使用angular-ui里面自带的组件时，可以使用。如果只使用很少的一部分代码，那可以自己写相关的代码即可。</p>
-</blockquote>
-<h4 id="五、焦点状态"><a href="#五、焦点状态" class="headerlink" title="五、焦点状态"></a>五、焦点状态</h4><h5 id="使用指令的方式完成焦点状态的获取。"><a href="#使用指令的方式完成焦点状态的获取。" class="headerlink" title="使用指令的方式完成焦点状态的获取。"></a>使用指令的方式完成焦点状态的获取。</h5><!-- var path = $location.path();
-        return {
-            // name: '',
-            // priority: 1,
-            // terminal: true,
-            // scope: {}, // {} = isolate, true = child, false/undefined = no change
-            // controller: function($scope, $element, $attrs, $transclude) {},
-            // require: 'ngModel', // Array = multiple requires, ? = optional, ^ = check parent elements
-            restrict: 'EA', // E = Element, A = Attribute, C = Class, M = Comment
-            // template: '',
-            // templateUrl: '',
-            // replace: true,
-            // transclude: true,
-            // compile: function(tElement, tAttrs, function transclude(function(scope, cloneLinkingFn){ return function linking(scope, elm, attrs){}})),
-            link: function($scope, iElm, iAttrs, controller) {
-                var href = iElm.children().attr('href');
-                var Link = href.replace(/#(\/.+?)\/\d+/, '$1');
-                console.log(Link);
-                console.log(path);
-                if(path.startsWith(Link)) {
-                    iElm.addClass('active');
-                }
-                iElm.on('click', function() {
-                    iElm.addClass('active').siblings().removeClass('active');
-                });
-            }
-        }; -->
-
+<h4 id="五、焦点状态"><a href="#五、焦点状态" class="headerlink" title="五、焦点状态"></a>五、焦点状态</h4><h5 id="使用指令的方式完成焦点状态的获取。"><a href="#使用指令的方式完成焦点状态的获取。" class="headerlink" title="使用指令的方式完成焦点状态的获取。"></a>使用指令的方式完成焦点状态的获取。</h5>
   </section>
 
   
