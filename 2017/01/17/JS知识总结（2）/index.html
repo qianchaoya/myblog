@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    
+
+    <title>
+      js知识总结（2） | Welcome To My Blog 
+    </title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    
+      <meta name="author" content="差不多先生">
+    
+    
+
+    <meta name="description" content="JS知识总结（2）1：JS中何时该用数组，何时该用对象？
+a):数组： 可看做是相似数据的有序列表；如一组同事的名字or一组图书的书名；
+b):对象：对象的最佳应用是封装单个实体的信息；如一个同事对象可能包含这个人的名字和年龄属性；一本书的对象可能有书名、作者等属性；属性是明确的命名，可以很容易的访问到，也可以给对象添加方法去操作这个对象和它的属性；
+c):创建对象的数组：“数组性”能让脚本遍历访">
+<meta property="og:type" content="article">
+<meta property="og:title" content="js知识总结（2） | Welcome To My Blog">
+<meta property="og:url" content="http://yoursite.com/2017/01/17/JS知识总结（2）/index.html">
+<meta property="og:site_name" content="Welcome To My Blog">
+<meta property="og:description" content="JS知识总结（2）1：JS中何时该用数组，何时该用对象？
+a):数组： 可看做是相似数据的有序列表；如一组同事的名字or一组图书的书名；
+b):对象：对象的最佳应用是封装单个实体的信息；如一个同事对象可能包含这个人的名字和年龄属性；一本书的对象可能有书名、作者等属性；属性是明确的命名，可以很容易的访问到，也可以给对象添加方法去操作这个对象和它的属性；
+c):创建对象的数组：“数组性”能让脚本遍历访">
+<meta property="og:updated_time" content="2017-01-17T09:00:46.186Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="js知识总结（2） | Welcome To My Blog">
+<meta name="twitter:description" content="JS知识总结（2）1：JS中何时该用数组，何时该用对象？
+a):数组： 可看做是相似数据的有序列表；如一组同事的名字or一组图书的书名；
+b):对象：对象的最佳应用是封装单个实体的信息；如一个同事对象可能包含这个人的名字和年龄属性；一本书的对象可能有书名、作者等属性；属性是明确的命名，可以很容易的访问到，也可以给对象添加方法去操作这个对象和它的属性；
+c):创建对象的数组：“数组性”能让脚本遍历访">
+    
+    
+    
+    <link rel="stylesheet" href="/css/uno.css">
+    <link rel="stylesheet" href="/css/highlight.css">
+    <link rel="stylesheet" href="/css/archive.css">
+    <link rel="stylesheet" href="/css/china-social-icon.css">
+
+</head>
+<body>
+
+    <span class="mobile btn-mobile-menu">
+        <i class="icon icon-list btn-mobile-menu__icon"></i>
+        <i class="icon icon-x-circle btn-mobile-close__icon hidden"></i>
+    </span>
+
+    
+
+<header class="panel-cover panel-cover--collapsed">
+
+
+  <div class="panel-main">
+
+  
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+
+        
+
+        <h1 class="panel-cover__title panel-title"><a href="/" title="link to homepage">Welcome To My Blog</a></h1>
+        <hr class="panel-cover__divider" />
+
+        
+
+        <div class="navigation-wrapper">
+
+          <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
+
+              
+                
+                <li class="navigation__item"><a href="/#blog" title="" class="blog-button">首页</a></li>
+              
+                
+                <li class="navigation__item"><a href="/about" title="" class="">关于</a></li>
+              
+                
+                <li class="navigation__item"><a href="/archive" title="" class="">归档</a></li>
+              
+                
+                <li class="navigation__item"><a href="/#dou" title="" class="">豆</a></li>
+              
+                
+                <li class="navigation__item"><a href="/#weixin" title="" class="">微信</a></li>
+              
+
+            </ul>
+          </nav>
+
+          <!-- ----------------------------
+To add a new social icon simply duplicate one of the list items from below
+and change the class in the <i> tag to match the desired social network
+and then add your link to the <a>. Here is a full list of social network
+classes that you can use:
+
+    icon-social-500px
+    icon-social-behance
+    icon-social-delicious
+    icon-social-designer-news
+    icon-social-deviant-art
+    icon-social-digg
+    icon-social-dribbble
+    icon-social-facebook
+    icon-social-flickr
+    icon-social-forrst
+    icon-social-foursquare
+    icon-social-github
+    icon-social-google-plus
+    icon-social-hi5
+    icon-social-instagram
+    icon-social-lastfm
+    icon-social-linkedin
+    icon-social-medium
+    icon-social-myspace
+    icon-social-path
+    icon-social-pinterest
+    icon-social-rdio
+    icon-social-reddit
+    icon-social-skype
+    icon-social-spotify
+    icon-social-stack-overflow
+    icon-social-steam
+    icon-social-stumbleupon
+    icon-social-treehouse
+    icon-social-tumblr
+    icon-social-twitter
+    icon-social-vimeo
+    icon-social-xbox
+    icon-social-yelp
+    icon-social-youtube
+    icon-social-zerply
+    icon-mail
+
+-------------------------------->
+
+<!-- add social info here -->
+
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="panel-cover--overlay"></div>
+  </div>
+</header>
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner entry">
+            
+
+<article class="post-container post-container--single">
+
+  <header class="post-header">
+    
+    <h1 class="post-title">js知识总结（2）</h1>
+
+    
+
+    <div class="post-meta">
+      <time datetime="2017-01-17" class="post-meta__date date">2017-01-17</time> 
+
+      <span class="post-meta__tags tags">
+
+          
+
+          
+
+      </span>
+    </div>
+    
+    
+
+  </header>
+
+  <section id="post-content" class="article-content post">
+    <h3 id="JS知识总结（2）"><a href="#JS知识总结（2）" class="headerlink" title="JS知识总结（2）"></a>JS知识总结（2）</h3><h4 id="1：JS中何时该用数组，何时该用对象？"><a href="#1：JS中何时该用数组，何时该用对象？" class="headerlink" title="1：JS中何时该用数组，何时该用对象？"></a>1：JS中何时该用数组，何时该用对象？</h4><ul>
+<li>a):数组： 可看做是相似数据的有序列表；如一组同事的名字or一组图书的书名；</li>
+<li>b):对象：对象的最佳应用是封装单个实体的信息；如一个同事对象可能包含这个人的名字和年龄属性；一本书的对象可能有书名、作者等属性；属性是明确的命名，可以很容易的访问到，也可以给对象添加方法去操作这个对象和它的属性；</li>
+<li>c):创建对象的数组：“数组性”能让脚本遍历访问整个对象列表；“对象性”能让脚本检查数组中的每个对象的特定属性；<h4 id="2-两种从服务器获取数据到已渲染页面的方法："><a href="#2-两种从服务器获取数据到已渲染页面的方法：" class="headerlink" title="2: 两种从服务器获取数据到已渲染页面的方法："></a>2: 两种从服务器获取数据到已渲染页面的方法：</h4></li>
+<li>a): Ajax方法 ：利用XMLHttpRequest对象，让已经渲染完毕的页面向服务器处理发出请求，处理返回XML文档表单中的数据，浏览器脚本能很容易的从中提取数据，更新渲染后的页面内容，这种方法被称为异步Javascript和XML,简称Ajax；</li>
+<li>b):JSON方法 ：服务器处理能够将包含JS数组和自定义对象代码的字符串返给XMLHttpRequest对象，浏览器收到之后，通过一条语句(eval_r())将字符串转换成完整的JS数组和对象，以供进一步的处理，这种方法被称为JavaScript对象描述（JavaScript Object Notation）；<h4 id="3：-简单数组："><a href="#3：-简单数组：" class="headerlink" title="3： 简单数组："></a>3： 简单数组：</h4></li>
+<li>a):创建：<br>// 给数组追加值的两种方法：<br>1: var myArray = new Array( );</li>
+</ul>
+<p>2: myArray [myArray .length] = “Steve”;<br>     myArray .push(Alice);</p>
+<ul>
+<li>b): 遍历：<br>// for 循环，遍历数组所有的元素<br>var  myArray  = [“aaa”,”bbb”,”ccc”];<br>for (var  i = 0;i &lt; myArray .length;i++){<br>alert(“item” + i  + “ is : “ +  myArray[i] + “.”);<br>}<br>// 让循环逆向执行<br>for (var i = myArray .length  -1;i&gt;= 0; i–){<br>alert(“item” + i  + “ is : “ +  myArray[i] + “.”);<br>}<h4 id="4-多维数组："><a href="#4-多维数组：" class="headerlink" title="4: 多维数组："></a>4: 多维数组：</h4><h6 id="4-1-多维数组创建"><a href="#4-1-多维数组创建" class="headerlink" title="4.1 多维数组创建"></a>4.1 多维数组创建</h6></li>
+<li>方法1：直接定义并且初始化，这种遇到数量少的情况可以用<br><strong>var _TheArray = [[“0-1”,”0-2”],[“1-1”,”1-2”],[“2-1”,”2-2”]]</strong></li>
+<li>方法二：未知长度的二维数组：<br><strong>var tArray = new Array();</strong>  //先声明一维<br><strong>for(var k=0;k&lt;i;k++){</strong>   //一维长度为i,i为变量，可以根据实际情况改变<br><strong>tArray[k]=new Array();</strong>  //声明二维，每一个一维数组里面的一个元素都是一个数组；<br><strong>for(var j=0;j&lt;p;j++){</strong>   //一维数组里面每个元素数组可以包含的数量p，p也是一个变量；<br><strong>tArray[k][j]=””</strong>    //这里将变量初始化，我这边统一初始化为空，后面在用所需的值覆盖里面的值<br><strong>}</strong><br><strong>}</strong><h5 id="4-2-二维数组的遍历"><a href="#4-2-二维数组的遍历" class="headerlink" title="4.2 二维数组的遍历"></a>4.2 二维数组的遍历</h5><strong>a):for(){}遍历数组</strong></li>
+</ul>
+<blockquote>
+<p>var arr = new Array(13.5,3,4,5,6);<br> for(var i=0;i&lt;arr.length;i++){<br>  arr[i] = arr[i]/2.0;<br> }<br>alert(arr);</p>
+</blockquote>
+<p><strong>b):for in循环遍历数组</strong></p>
+<blockquote>
+<p>var x<br>var mycars = new Array()<br>mycars[0] = “Saab”<br>mycars[1] = “Volvo”<br>mycars[2] = “BMW”<br>for (x in mycars)<br>{<br>document.write(mycars[x] + “<br>“)<br>}</p>
+<h4 id="4-3-数组排序："><a href="#4-3-数组排序：" class="headerlink" title="4.3 数组排序："></a>4.3 数组排序：</h4><h6 id="a-myArray-sort"><a href="#a-myArray-sort" class="headerlink" title="a): myArray.sort():"></a>a): myArray.sort():</h6><ul>
+<li>1: sort()方法会直接修改原数组，无法恢复原始顺序；</li>
+<li>2:  sort()方法唯一参数：比较函数；</li>
+<li>3:function compareNumbers(a,b){<br>return  a-b;<br>}<br>myArray.sort(compareNumbers);<h4 id="5-合并多个数组-concat-："><a href="#5-合并多个数组-concat-：" class="headerlink" title="5:合并多个数组 concat()："></a>5:合并多个数组 concat()：</h4></li>
+<li>a): concat()方法的参数可以是任何数据类型；</li>
+<li>b)   concat()方法不会改变被连接的数组；<h6 id="var-comboArray-myArray-concat-anotherArray"><a href="#var-comboArray-myArray-concat-anotherArray" class="headerlink" title="var comboArray = myArray.concat(anotherArray);"></a>var comboArray = myArray.concat(anotherArray);</h6><h6 id="var-comboArray"><a href="#var-comboArray" class="headerlink" title="var comboArray ="></a>var comboArray =</h6>myArray.concat(anotherArray1,anotherArray2);<h6 id="var-comboArray-myArray-concat-num1-num2-strl-bool"><a href="#var-comboArray-myArray-concat-num1-num2-strl-bool" class="headerlink" title="var comboArray = myArray.concat(num1,num2,strl,bool);"></a>var comboArray = myArray.concat(num1,num2,strl,bool);</h6><h4 id="6-分解数组-splice-："><a href="#6-分解数组-splice-：" class="headerlink" title="6: 分解数组 splice() ："></a>6: 分解数组 splice() ：</h4></li>
+<li><strong>a)   从原数组中拿掉一部分</strong><br><strong>1：splice()方法的两个参数：指定以0开始的第一个元素的索引， 从原数组中删除的元素的个数;</strong><br>// 分解数组splice( )<br>// 从原数组中删除前3个元素<br>// 运行结果<br>//myArray : [40,50,60,70]<br>//subArray : [10,20,30]<br><strong>var myArray  =[10,20,30,40,50,60,70];</strong><br><strong>var subArray  =  myArray.splice(0,3);</strong></li>
+</ul>
+</blockquote>
+<ul>
+<li><p><strong>b):  任意位置数组元素替换:</strong><br>// splice()方法实现数组元素的替换<br>//myArray : [10,20,”a”,”b”,60,70]<br>//subArray : [30,40,50] </p>
+<blockquote>
+<p><strong>var myArray  =  [10,20,30,40,50,60,70];</strong><br><strong>var subArray  =  myArray.splice(2,3,”a”,”b”);</strong></p>
+</blockquote>
+</li>
+<li><p><strong>c):任意文字数组元素的添加</strong></p>
+<h4 id="7-对象数组的排序："><a href="#7-对象数组的排序：" class="headerlink" title="7.   对象数组的排序："></a>7.   对象数组的排序：</h4><h5 id="a-基于对象的某个属性值对对象数组进行排序；"><a href="#a-基于对象的某个属性值对对象数组进行排序；" class="headerlink" title="a)   基于对象的某个属性值对对象数组进行排序；"></a>a)   基于对象的某个属性值对对象数组进行排序；</h5><h5 id="b-对象数组的排序依赖于比较函数的逻辑扩展；"><a href="#b-对象数组的排序依赖于比较函数的逻辑扩展；" class="headerlink" title="b)   对象数组的排序依赖于比较函数的逻辑扩展；"></a>b)   对象数组的排序依赖于比较函数的逻辑扩展；</h5><p>//对象数组排序<br>//填充数组对象<br><strong>var sales   =   new  Array();</strong><br><strong>sales[sales.length] = {period: “q1”,region:”east”,total:2300}</strong><br><strong>sales[sales.length] = {period: “q2”,region:”east”,total:3100}</strong><br><strong>sales[sales.length] = {period: “q1”,region:”central”,total:1800}</strong><br><strong>sales[sales.length] = {period: “q1”,region:”central”,total:1950}</strong><br>//按照每个对象的total值降序排列<br>// 定义比较函数<br><strong>function  compareTobal(a,b){</strong><br><strong>return b.total - a.total;</strong><br><strong>}</strong><br>//sort( )组排序<br>//sort( )方法会直接修改原数组的排序；<br>//可以继续通过其他的比较函数调用sort( )方法，以实现按照其他准则对数组的再次排序<br><strong>sales.sort(compareTobals);</strong></p>
+<h4 id="10-自定义对象的原型："><a href="#10-自定义对象的原型：" class="headerlink" title="10: 自定义对象的原型："></a>10: 自定义对象的原型：</h4></li>
+<li>a):通过原型给已创建或将要创建的构造器追加属性和默认值时，所有的对象实例（包括已经创建的实例）都会自动获得这个新属性和值；</li>
+<li>b):当修改某个对象实例的原型属性的值，那么这个值会成为该实例的私有属性，此操作不会影响到该对象的其他实例，其他实例依旧共享原型属性的默认值；</li>
+<li>c):重载的属性值是持久的，在进行过上述修改后，就算在修改原型属性的值，这个单独分配的私有属性值是不会再收原型的变更的影响的，因为这个局部变量已经被显示重载了；</li>
+<li>d)   继承原型属性的对象实例，都可以读取原型的值，即使这个值已经被对象实例重载了，constructor（或<strong>proto</strong>）属性指向维护原型信息的构造函数；<br>// 自定义对象原型<br>//cowoker对象构造器和他的4个实体<blockquote>
+<p><strong>function  cowoker  (name,age)  {</strong><br><strong>this.name   =   name;</strong><br><strong>this.age  =  age || 0 ;</strong><br><strong>}</strong><br><strong>var employeeDB =  new Array( );</strong><br><strong>employeeDB[ employee.length] = new cowoker(“aaa”,23);</strong><br><strong>employeeDB[ employee.length] = new cowoker(“bbb”,26);</strong><br><strong>employeeDB[ employee.length] = new cowoker(“ccc”,25);</strong><br><strong>employeeDB[ employee.length] = new cowoker(“ddd”,28);</strong><br>// 通过原型给cowoker构造器追加属性，并指定默认值<br>//employeeDB数组中的每个对象实例都会立即继承这个status属性<br><strong>cowoker.prototype.status =  “on   duty”;</strong><br><strong>employeeDB[2].status</strong>   //on duty<br>//重载某个对象实例的原型属性值；<br><strong>employeeDB[2].status =   “on sick leave”;</strong><br><strong>alert(employeeDB[1].status); </strong>  //duty<br><strong>alert(employeeDB[2].status);</strong>   // on sick leave<br>//修改原型属性的值<br><strong>cowoker.prototype.status  =  “ on vacation”;</strong><br>//employeeDB[2].status因为已经被显性重载，所以不收原型的变更影响；<br><strong>alert(employeeDB[1].status);  </strong> // on vacation<br><strong>alert(employeeDB[2].status);</strong>  // on sick leave<br>// 对象实例去读取原型的值<br><strong>alert(employeeDB[2].constructor.prototype.status);</strong>  //on  vacation</p>
+</blockquote>
+</li>
+</ul>
+
+  </section>
+
+  
+  
+</article>
+
+
+            
+        </div>
+    </div>
+
+    <!-- js files -->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/scale.fix.js"></script>
+    
+
+    
+
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript"> 
+        $(document).ready(function(){
+            MathJax.Hub.Config({ 
+                tex2jax: {inlineMath: [['[latex]','[/latex]'], ['\\(','\\)']]} 
+            });
+        });
+    </script>
+
+
+    
+
+    <script src="/js/awesome-toc.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $.awesome_toc({
+                overlay: true,
+                contentId: "post-content",
+            });
+        });
+    </script>
+
+
+    
+    
+    <!--kill ie6 -->
+<!--[if IE 6]>
+  <script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
+<![endif]-->
+
+</body>
+</html>
