@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    
+
+    <title>
+      js知识总结（1） | Welcome To My Blog 
+    </title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    
+      <meta name="author" content="差不多先生">
+    
+    
+
+    <meta name="description" content="js知识总结（1）1：JS的组成：
+a :ECMAScript 是什么：担当的是一个翻译的角色；是一个解释器；帮助计算机来读懂我们写的程序；实现+-*/, 定义变量；几乎没有兼容性问题；
+b : DOM： 文档对象模型；文档指的就是网页；把网页变成一个JS可以操作的对象；给了JS可以操作页面元素的能力；document;有一些兼容性问题；
+
+2： 变量类型：
+检测变量类型： typeof
+类型：n">
+<meta property="og:type" content="article">
+<meta property="og:title" content="js知识总结（1） | Welcome To My Blog">
+<meta property="og:url" content="http://yoursite.com/2017/01/17/JS知识点（1）/index.html">
+<meta property="og:site_name" content="Welcome To My Blog">
+<meta property="og:description" content="js知识总结（1）1：JS的组成：
+a :ECMAScript 是什么：担当的是一个翻译的角色；是一个解释器；帮助计算机来读懂我们写的程序；实现+-*/, 定义变量；几乎没有兼容性问题；
+b : DOM： 文档对象模型；文档指的就是网页；把网页变成一个JS可以操作的对象；给了JS可以操作页面元素的能力；document;有一些兼容性问题；
+
+2： 变量类型：
+检测变量类型： typeof
+类型：n">
+<meta property="og:updated_time" content="2017-01-17T06:56:38.824Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="js知识总结（1） | Welcome To My Blog">
+<meta name="twitter:description" content="js知识总结（1）1：JS的组成：
+a :ECMAScript 是什么：担当的是一个翻译的角色；是一个解释器；帮助计算机来读懂我们写的程序；实现+-*/, 定义变量；几乎没有兼容性问题；
+b : DOM： 文档对象模型；文档指的就是网页；把网页变成一个JS可以操作的对象；给了JS可以操作页面元素的能力；document;有一些兼容性问题；
+
+2： 变量类型：
+检测变量类型： typeof
+类型：n">
+    
+    
+    
+    <link rel="stylesheet" href="/css/uno.css">
+    <link rel="stylesheet" href="/css/highlight.css">
+    <link rel="stylesheet" href="/css/archive.css">
+    <link rel="stylesheet" href="/css/china-social-icon.css">
+
+</head>
+<body>
+
+    <span class="mobile btn-mobile-menu">
+        <i class="icon icon-list btn-mobile-menu__icon"></i>
+        <i class="icon icon-x-circle btn-mobile-close__icon hidden"></i>
+    </span>
+
+    
+
+<header class="panel-cover panel-cover--collapsed">
+
+
+  <div class="panel-main">
+
+  
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+
+        
+
+        <h1 class="panel-cover__title panel-title"><a href="/" title="link to homepage">Welcome To My Blog</a></h1>
+        <hr class="panel-cover__divider" />
+
+        
+
+        <div class="navigation-wrapper">
+
+          <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
+
+              
+                
+                <li class="navigation__item"><a href="/#blog" title="" class="blog-button">首页</a></li>
+              
+                
+                <li class="navigation__item"><a href="/about" title="" class="">关于</a></li>
+              
+                
+                <li class="navigation__item"><a href="/archive" title="" class="">归档</a></li>
+              
+                
+                <li class="navigation__item"><a href="/#dou" title="" class="">豆</a></li>
+              
+                
+                <li class="navigation__item"><a href="/#weixin" title="" class="">微信</a></li>
+              
+
+            </ul>
+          </nav>
+
+          <!-- ----------------------------
+To add a new social icon simply duplicate one of the list items from below
+and change the class in the <i> tag to match the desired social network
+and then add your link to the <a>. Here is a full list of social network
+classes that you can use:
+
+    icon-social-500px
+    icon-social-behance
+    icon-social-delicious
+    icon-social-designer-news
+    icon-social-deviant-art
+    icon-social-digg
+    icon-social-dribbble
+    icon-social-facebook
+    icon-social-flickr
+    icon-social-forrst
+    icon-social-foursquare
+    icon-social-github
+    icon-social-google-plus
+    icon-social-hi5
+    icon-social-instagram
+    icon-social-lastfm
+    icon-social-linkedin
+    icon-social-medium
+    icon-social-myspace
+    icon-social-path
+    icon-social-pinterest
+    icon-social-rdio
+    icon-social-reddit
+    icon-social-skype
+    icon-social-spotify
+    icon-social-stack-overflow
+    icon-social-steam
+    icon-social-stumbleupon
+    icon-social-treehouse
+    icon-social-tumblr
+    icon-social-twitter
+    icon-social-vimeo
+    icon-social-xbox
+    icon-social-yelp
+    icon-social-youtube
+    icon-social-zerply
+    icon-mail
+
+-------------------------------->
+
+<!-- add social info here -->
+
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="panel-cover--overlay"></div>
+  </div>
+</header>
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner entry">
+            
+
+<article class="post-container post-container--single">
+
+  <header class="post-header">
+    
+    <h1 class="post-title">js知识总结（1）</h1>
+
+    
+
+    <div class="post-meta">
+      <time datetime="2017-01-17" class="post-meta__date date">2017-01-17</time> 
+
+      <span class="post-meta__tags tags">
+
+          
+
+          
+
+      </span>
+    </div>
+    
+    
+
+  </header>
+
+  <section id="post-content" class="article-content post">
+    <h3 id="js知识总结（1）"><a href="#js知识总结（1）" class="headerlink" title="js知识总结（1）"></a>js知识总结（1）</h3><h4 id="1：JS的组成："><a href="#1：JS的组成：" class="headerlink" title="1：JS的组成："></a>1：JS的组成：</h4><ul>
+<li>a :ECMAScript 是什么：担当的是一个翻译的角色；是一个解释器；帮助计算机来读懂我们写的程序；实现+-*/, 定义变量；几乎没有兼容性问题；</li>
+<li>b : DOM： 文档对象模型；文档指的就是网页；把网页变成一个JS可以操作的对象；给了JS可以操作页面元素的能力；document;有一些兼容性问题；</li>
+</ul>
+<h4 id="2：-变量类型："><a href="#2：-变量类型：" class="headerlink" title="2： 变量类型："></a>2： 变量类型：</h4><ul>
+<li>检测变量类型： typeof</li>
+<li>类型：number, string, boolean, object, function, undefined,</li>
+<li>变量是一个杯子，它的类型是由它里面存放的东西决定的；</li>
+<li>Undefined类型出现：1是真的没有定义， 2是虽然定义了，但没有赋值；</li>
+<li>Object是什么：对象是一个复合类型，它是由一组基本类型组成的；如：div，它是一个对象，它有id,width等特性，它的id是string的，width是number的；</li>
+<li>基本类型与引用类型：<h4 id="3：-变量类型转换："><a href="#3：-变量类型转换：" class="headerlink" title="3：  变量类型转换："></a>3：  变量类型转换：</h4></li>
+<li>parseInt(); 从字符串中提取数字；</li>
+<li>NaN; not a number;</li>
+<li>NaN 和任何数计算 都是NaN;</li>
+<li>NaN 不与任何值相等，包括它自身；要比较需要使用方法isNaN();</li>
+<li>显性类型转换：</li>
+<li>parseInt()/ parseFloat();</li>
+<li>NaN 的意义和检测：</li>
+</ul>
+<ol>
+<li>意义：not a number;</li>
+<li>检测：isNaN();</li>
+</ol>
+<ul>
+<li>隐式类型转换：</li>
+<li>“==” ,就是隐式转换，它会先把两边的东西转成一样的类型，然后再进行比较；</li>
+<li>减法、乘法、除法 也会进行自发的隐式转换；只有加号不可以；<h4 id="4：-变量作用域与闭包："><a href="#4：-变量作用域与闭包：" class="headerlink" title="4：   变量作用域与闭包："></a>4：   变量作用域与闭包：</h4></li>
+<li>作用域：就是变量能够起作用的范围；</li>
+<li>局部变量：定义在一个函数里，只能在这个函数里用；</li>
+<li>全局变量： 不定义在任何一个函数里，可以在任何地方去用；</li>
+<li>闭包：是另一种作用域；子函数可以使用父函数的局部变量； <h4 id="5-命名规范："><a href="#5-命名规范：" class="headerlink" title="5 :   命名规范："></a>5 :   命名规范：</h4></li>
+<li>匈牙利命名法：<br>1：   有类型前缀；<br>2：首字母大写；<h4 id="6：运算符："><a href="#6：运算符：" class="headerlink" title="6：运算符："></a>6：运算符：</h4></li>
+<li>算术： 加减乘除、取模（求余数%）；</li>
+<li>赋值：= ， +=，</li>
+<li>关系： &lt;， &gt;， &lt;=， &gt;=， ==， ===，!=， !==</li>
+<li>逻辑： &amp;&amp; 与， ||或，!取反；</li>
+<li>运算符优先级：();<h4 id="7：程序流程控制："><a href="#7：程序流程控制：" class="headerlink" title="7：程序流程控制："></a>7：程序流程控制：</h4></li>
+<li>判断：if, switch, ? :</li>
+<li>循环： while, for</li>
+<li>跳出： break(终止整个循环), continue(终止本次循环，继续下次循环；只跳过当次；)</li>
+<li>什么是真，什么是假：<br>1: 真： true, 非0数字，非空字符串包括空格，非空对象<br>2:假： false, 数字0，空字符串，空对象null, undefined,<h4 id="8-Json"><a href="#8-Json" class="headerlink" title="8:Json:"></a>8:Json:</h4></li>
+<li>专门为JS诞生的一种数据格式；（JavaScript Object Notation）</li>
+<li>JS 对象标记语言；</li>
+<li>JS 和数组的关系；</li>
+<li>JS的遍历： for… in<h4 id="9：函数返回值："><a href="#9：函数返回值：" class="headerlink" title="9：函数返回值："></a>9：函数返回值：</h4></li>
+<li>就是函数的执行结果；</li>
+<li>可以没有return, 它会返回一个undefined；<h4 id="10：函数传参"><a href="#10：函数传参" class="headerlink" title="10：函数传参"></a>10：函数传参</h4></li>
+<li>arguments : 可变参， 存放所有的参数</li>
+<li>封装CSS函数：利用argument长度判断，同时支持获取与设置；</li>
+<li>如何获取非行间的样式：<br>1：currentStyle : 获取计算后的样式 （IE下）<br>2： getComputedStyle : （FF下）<br>3：可以获取默认样式；<br>4：对于复合样式：如background无法获取；<h4 id="11-：数组："><a href="#11-：数组：" class="headerlink" title="11 ：数组："></a>11 ：数组：</h4><ul>
+<li>a): 数组的length属性可以赋值；可以用length=0清空数组；</li>
+<li><strong>b):添加与删除元素：</strong><br>1：push() 和 pop() – 尾部添、删<br>2： unshift() 和 shift() – 头部添、删<br><strong>c): 排序：</strong><br>1：sort():让sort排序数字，使用比较函数;</li>
+<li><strong>d):转换型:</strong><br>1:concat() : 连接两个数组，生成一个新数组；<br>2: join(分隔符): 用分隔符组合数组元素，生成一个字符串；<br>3：split(分隔符)： 和join相反，把字符串切成数组；</li>
+<li><strong>e):万能方法splice（）</strong><br>1:参数：splice(开始位置，长度，新元素，新元素…)；<br>2: 作用：先从开始位置删除一定长度的元素，再在指定位置开始插入一些元素；<br>3: 可以用于从中间插入、中间删除、以及任意位置替。<br><strong>未完待续。。。</strong></li>
+</ul>
+</li>
+</ul>
+
+  </section>
+
+  
+  
+</article>
+
+
+            
+        </div>
+    </div>
+
+    <!-- js files -->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/scale.fix.js"></script>
+    
+
+    
+
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript"> 
+        $(document).ready(function(){
+            MathJax.Hub.Config({ 
+                tex2jax: {inlineMath: [['[latex]','[/latex]'], ['\\(','\\)']]} 
+            });
+        });
+    </script>
+
+
+    
+
+    <script src="/js/awesome-toc.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $.awesome_toc({
+                overlay: true,
+                contentId: "post-content",
+            });
+        });
+    </script>
+
+
+    
+    
+    <!--kill ie6 -->
+<!--[if IE 6]>
+  <script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
+<![endif]-->
+
+</body>
+</html>
