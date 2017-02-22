@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    
+
+    <title>
+      ajax请求方式 | Welcome To My Blog 
+    </title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    
+      <meta name="author" content="差不多先生">
+    
+    
+
+    <meta name="description" content="jQuery中ajax的4种常用请求方式：1.$.ajax()返回其创建的 XMLHttpRequest 对象。$.ajax() 只有一个参数：参数 key/value 对象，包含各配置及回调函数信息。详细参数选项见下。如果你指定了 dataType 选项，请确保服务器返回正确的 MIME 信息，(如 xml 返回 “text/xml”)。实例：保存数据到服务器，成功时显示信息。 
+ $.ajax">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ajax请求方式 | Welcome To My Blog">
+<meta property="og:url" content="http://yoursite.com/2017/02/22/ajax请求/index.html">
+<meta property="og:site_name" content="Welcome To My Blog">
+<meta property="og:description" content="jQuery中ajax的4种常用请求方式：1.$.ajax()返回其创建的 XMLHttpRequest 对象。$.ajax() 只有一个参数：参数 key/value 对象，包含各配置及回调函数信息。详细参数选项见下。如果你指定了 dataType 选项，请确保服务器返回正确的 MIME 信息，(如 xml 返回 “text/xml”)。实例：保存数据到服务器，成功时显示信息。 
+ $.ajax">
+<meta property="og:updated_time" content="2017-02-22T09:41:40.711Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="ajax请求方式 | Welcome To My Blog">
+<meta name="twitter:description" content="jQuery中ajax的4种常用请求方式：1.$.ajax()返回其创建的 XMLHttpRequest 对象。$.ajax() 只有一个参数：参数 key/value 对象，包含各配置及回调函数信息。详细参数选项见下。如果你指定了 dataType 选项，请确保服务器返回正确的 MIME 信息，(如 xml 返回 “text/xml”)。实例：保存数据到服务器，成功时显示信息。 
+ $.ajax">
+    
+    
+    
+    <link rel="stylesheet" href="/css/uno.css">
+    <link rel="stylesheet" href="/css/highlight.css">
+    <link rel="stylesheet" href="/css/archive.css">
+    <link rel="stylesheet" href="/css/china-social-icon.css">
+
+</head>
+<body>
+
+    <span class="mobile btn-mobile-menu">
+        <i class="icon icon-list btn-mobile-menu__icon"></i>
+        <i class="icon icon-x-circle btn-mobile-close__icon hidden"></i>
+    </span>
+
+    
+
+<header class="panel-cover panel-cover--collapsed">
+
+
+  <div class="panel-main">
+
+  
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+
+        
+
+        <h1 class="panel-cover__title panel-title"><a href="/" title="link to homepage">Welcome To My Blog</a></h1>
+        <hr class="panel-cover__divider" />
+
+        
+
+        <div class="navigation-wrapper">
+
+          <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
+
+              
+                
+                <li class="navigation__item"><a href="/#blog" title="" class="blog-button">首页</a></li>
+              
+                
+                <li class="navigation__item"><a href="/#about" title="" class="">关于</a></li>
+              
+                
+                <li class="navigation__item"><a href="/#archive" title="" class="">归档</a></li>
+              
+                
+                <li class="navigation__item"><a href="/#dou" title="" class="">豆</a></li>
+              
+                
+                <li class="navigation__item"><a href="/#weixin" title="" class="">微信</a></li>
+              
+
+            </ul>
+          </nav>
+
+          <!-- ----------------------------
+To add a new social icon simply duplicate one of the list items from below
+and change the class in the <i> tag to match the desired social network
+and then add your link to the <a>. Here is a full list of social network
+classes that you can use:
+
+    icon-social-500px
+    icon-social-behance
+    icon-social-delicious
+    icon-social-designer-news
+    icon-social-deviant-art
+    icon-social-digg
+    icon-social-dribbble
+    icon-social-facebook
+    icon-social-flickr
+    icon-social-forrst
+    icon-social-foursquare
+    icon-social-github
+    icon-social-google-plus
+    icon-social-hi5
+    icon-social-instagram
+    icon-social-lastfm
+    icon-social-linkedin
+    icon-social-medium
+    icon-social-myspace
+    icon-social-path
+    icon-social-pinterest
+    icon-social-rdio
+    icon-social-reddit
+    icon-social-skype
+    icon-social-spotify
+    icon-social-stack-overflow
+    icon-social-steam
+    icon-social-stumbleupon
+    icon-social-treehouse
+    icon-social-tumblr
+    icon-social-twitter
+    icon-social-vimeo
+    icon-social-xbox
+    icon-social-yelp
+    icon-social-youtube
+    icon-social-zerply
+    icon-mail
+
+-------------------------------->
+
+<!-- add social info here -->
+
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="panel-cover--overlay"></div>
+  </div>
+</header>
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner entry">
+            
+
+<article class="post-container post-container--single">
+
+  <header class="post-header">
+    
+    <h1 class="post-title">ajax请求方式</h1>
+
+    
+
+    <div class="post-meta">
+      <time datetime="2017-02-22" class="post-meta__date date">2017-02-22</time> 
+
+      <span class="post-meta__tags tags">
+
+          
+
+          
+
+      </span>
+    </div>
+    
+    
+
+  </header>
+
+  <section id="post-content" class="article-content post">
+    <h3 id="jQuery中ajax的4种常用请求方式："><a href="#jQuery中ajax的4种常用请求方式：" class="headerlink" title="jQuery中ajax的4种常用请求方式："></a>jQuery中ajax的4种常用请求方式：</h3><p>1.$.ajax()返回其创建的 XMLHttpRequest 对象。<br>$.ajax() 只有一个参数：参数 key/value 对象，包含各配置及回调函数信息。详细参数选项见下。<br>如果你指定了 dataType 选项，请确保服务器返回正确的 MIME 信息，(如 xml 返回 “text/xml”)。<br>实例：<br>保存数据到服务器，成功时显示信息。 </p>
+<pre><code> $.ajax({
+ type: &quot;post&quot;,
+ dataType: &quot;html&quot;,
+ url: &apos;/Resources/GetList.ashx&apos;,
+ data: dataurl,
+success: function (data) {
+      if (data != &quot;&quot;) {
+            $(&quot;#pager&quot;).pager({ pagenumber: pagenumber, pagecount: data.split(&quot;$$&quot;)[1], buttonClickCallback: PageClick });
+            $(&quot;#anhtml&quot;).html(data.split(&quot;$$&quot;)[0]);
+
+        }
+    }
+});
+</code></pre><p>2.通过远程 HTTP GET 请求载入信息。<br>这是一个简单的 GET 请求功能以取代复杂 $.ajax 。请求成功时可调用回调函数。如果需要在出错时执行函数，请使用 $.ajax。<br>实例：</p>
+<pre><code>$.get(&quot;test.cgi&quot;, { name: &quot;John&quot;, time: &quot;2pm&quot; },
+  function(data){
+alert(&quot;Data Loaded: &quot; + data);
+  }); 
+</code></pre><p><strong>3. 通过远程 HTTP POST 请求载入信息。<br>这是一个简单的 POST 请求功能以取代复杂 $.ajax 。请求成功时可调用回调函数。如果需要在出错时执行函数，请使用 $.ajax。</strong><br>实例：</p>
+<pre><code>     $.post(&quot;/Resources/addfriend.ashx&quot;, { &quot;fid&quot;: fids, &quot;fname&quot;: fnames, &quot;tuid&quot;: tuids, &quot;tuname&quot;: tunames }, function (data) {
+    if (data == &quot;ok&quot;) {
+        alert(&quot;添加成功！&quot;);
+    }
+})
+</code></pre><p>4.通过 HTTP GET 请求载入 JSON 数据。<br>实例：</p>
+<pre><code>$.getJSON(&quot;http://api.flickr.com/services/feeds/photos_public.gne?tags=cat&amp;tagmode=any&amp;format=json&amp;jsoncallback=?&quot;,
+function(data){
+  $.each(data.items, function(i,item){
+$(&quot;&lt;img/&gt;&quot;).attr(&quot;src&quot;, item.media.m).appendTo(&quot;#images&quot;);
+if ( i == 3 ) return false;
+  });
+}); 
+</code></pre>
+  </section>
+
+  
+  
+</article>
+
+
+            
+        </div>
+    </div>
+
+    <!-- js files -->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/scale.fix.js"></script>
+    
+
+    
+
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript"> 
+        $(document).ready(function(){
+            MathJax.Hub.Config({ 
+                tex2jax: {inlineMath: [['[latex]','[/latex]'], ['\\(','\\)']]} 
+            });
+        });
+    </script>
+
+
+    
+
+    <script src="/js/awesome-toc.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $.awesome_toc({
+                overlay: true,
+                contentId: "post-content",
+            });
+        });
+    </script>
+
+
+    
+    
+    <!--kill ie6 -->
+<!--[if IE 6]>
+  <script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
+<![endif]-->
+
+</body>
+</html>
