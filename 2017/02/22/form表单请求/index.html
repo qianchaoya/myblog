@@ -30,7 +30,7 @@
 &amp;lt;input type=’submit’&amp;gt;
  就可以进行数据的提交，每一个input标签都需要有一个name属性，才能进行提交。
 &amp;lt;form  action=’http://www.123.com/postValue’ meth">
-<meta property="og:updated_time" content="2017-02-22T05:00:42.999Z">
+<meta property="og:updated_time" content="2017-02-22T05:04:55.587Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="form表单请求方法 | Welcome To My Blog">
 <meta name="twitter:description" content="Form表单提交数据的几种方式:一、submit提交
@@ -200,8 +200,7 @@ classes that you can use:
 
 &lt;/form&gt;
 </code></pre><p>当点击登陆时，向数据库发生的数据是：</p>
-<p>####username=username&amp;password=password.</p>
-<p>这种默认的提交方式，一般会进行页面的跳转(不成功时跳转到当前页面)。而有时候我们是对弹出框进行数据提交的，希望提交成功则关闭弹出框并刷选父页面，失败则提示失败原因，且弹出框不关闭。此时可以采用Ajax进行数据提交.</p>
+<h4 id="username-username-amp-password-password"><a href="#username-username-amp-password-password" class="headerlink" title="username=username&amp;password=password."></a>username=username&amp;password=password.</h4><p>这种默认的提交方式，一般会进行页面的跳转(不成功时跳转到当前页面)。而有时候我们是对弹出框进行数据提交的，希望提交成功则关闭弹出框并刷选父页面，失败则提示失败原因，且弹出框不关闭。此时可以采用Ajax进行数据提交.</p>
 <p>二、Ajax提交form表单</p>
 <pre><code>$(&apos;#documentForm&apos;).submitForm({
         url: &quot;/Document/SubmitDocumentCreate&quot;,
@@ -222,19 +221,26 @@ classes that you can use:
 </code></pre><p>此时可以在callback函数中对请求结果进行判断，然后执行不同的动作(页面跳转或刷选数据、提醒错误都可以)</p>
 <p>三、Easyui的form插件</p>
 <p>通过easyui的form插件也可以达到上面的目的。</p>
-<blockquote>
-<p>$(‘#ff’).form(‘submit’, {</p>
-<p>url:…,</p>
-<p>onSubmit: function(){</p>
-<p>//进行表单验证</p>
-<p>//如果返回false阻止提交</p>
-<p>},</p>
-<p>success:function(data){</p>
-<p>alert(data)</p>
-<p>}</p>
-<p>});</p>
-</blockquote>
-<p>四、form表单提交附件</p>
+<pre><code>  $(&apos;#ff&apos;).form(&apos;submit&apos;, {
+
+url:...,
+
+onSubmit: function(){
+
+ //进行表单验证
+
+//如果返回false阻止提交
+
+},
+
+success:function(data){
+
+alert(data)
+
+}
+
+});
+</code></pre><p>四、form表单提交附件</p>
 <p>需要设定form的enctype=”multipart/form-data”并且添加</p>
 <pre><code>&lt;input type=’file’&gt;
 </code></pre><p>而且附件只能通过submit方法进行提交，</p>
